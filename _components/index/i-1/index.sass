@@ -1,0 +1,143 @@
+.block-index-1
+	position: relative
+	// max-height: r(872px) !important
+	// .fp-tableCell
+	// 	max-height: r(872px) !important
+	.swiper-container
+		width: 100%
+		height: 100%
+		.swiper-pagination
+			bottom: r(40px)
+			+media-breakpoint-down(md)
+				bottom: r(20px)
+			span
+				+wh(12px)
+				border-radius: 0
+				box-shadow: 0px 0px 0px 2px color-get($mau,trang) inset
+				background: transparent
+				opacity: 1 !important
+				&.active
+			.swiper-pagination-bullet-active
+				background: color-get($mau, main-b) !important
+				box-shadow: none
+		.swiper-slide
+			// height: 100%
+			// position: relative
+			.imgbox
+				background-repeat: no-repeat
+				background-position: center
+				background-size: cover
+				height: 100%
+				+media-breakpoint-down(md)
+					min-height: r(300px)
+				img
+					max-width: 100%
+					opacity: 0
+				// 	height: 100%
+				// 	object-fit: cover
+				.video
+					background: #ffffff
+					width: 70px
+					height: 70px
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+					border-radius: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					box-shadow: 0 0 0 3px rgba(244,244,244,.4)
+					transition: .4s all ease-in-out
+					cursor: pointer
+					text-decoration: none
+					em
+						font-size: 3rem
+						color: #ffdd00
+						transition: .4s all ease-in-out
+					+media-breakpoint-up(lg)
+						box-shadow: 0 0 0 5px rgba(244,244,244,.4)
+						width: 120px
+						height: 120px
+						em
+							font-size: 5rem
+						&:hover
+							background: #ffdd00
+							em
+								color: #fff
+			.banner-link
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				width: 300px
+				height: 180px
+				border: 8px solid color-get($mau, main-y)
+				+j-center
+				text-align: center
+				a
+					text-decoration: none
+					+f-center
+					flex-direction: column
+				h3
+					font-size: r(40px)
+					font-weight: 700
+					color: white
+					white-space: nowrap
+					letter-spacing: 1px
+				p
+					font-size: r(18px)
+					font-weight: 500
+					color: white
+				.btn
+					+btnGradient_1
+					color: white
+					border-radius: 4px
+					min-height: r(35px)
+					padding: 0 r(18px)
+					font-size: r(14px)
+					font-weight: 700
+					position: absolute
+					top: calc(100% + 5px)
+					left: 50%
+					transform: translate(-50%,-50%)
+				+media-breakpoint-down(sm)
+					border: 0
+					h3
+						font-size: 1.2rem
+					p
+						font-size: .9rem
+					.btn
+						display: none
+					
+	.btn-next
+		cursor: pointer
+		position: absolute
+		bottom: 30px
+		left: 50%
+		transform: translateX(-50%)
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 1px solid white
+		z-index: 20
+		+f-center
+		@media (max-width: 1599.98px)
+			display: none
+		span
+			font-size: r(24px)
+			color: white
+		&:after
+			content: ''
+			width: 1px
+			height: 30px
+			background: white
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: 100%
+		&:hover
+			background: color-get($mau, main-y)
+			border: 1px solid color-get($mau, main-b)
+			color: color-get($mau, main-b)
+			

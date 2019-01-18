@@ -1,0 +1,21 @@
+{
+	"scripts": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"bower_components/swiper/dist/js/swiper.min.js",
+		"bower_components/fullpage.js/dist/fullpage.min.js",
+		"bower_components/fullpage.js/dist/fullpage.extensions.min.js",
+		"_plugins/bgimg.js",
+		"_plugins/mapping-listener.js",
+		"_plugins/mapping.js",
+		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/aos/dist/aos.js"
+	],
+	"styles": [
+		"_plugins/grid.css",
+		"bower_components/fullpage.js/dist/fullpage.min.css",
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/aos/dist/aos.css"
+	]
+}

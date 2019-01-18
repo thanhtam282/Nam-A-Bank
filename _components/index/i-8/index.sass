@@ -1,0 +1,201 @@
+.block-index-8
+	background: color-get($mau,main-b)
+	// padding-top: 3rem
+	// padding-bottom: 3rem
+
+	.footer-content-0
+		padding-top: 5rem
+		padding-bottom: 3rem
+		+media-breakpoint-down(md)
+			padding: r(40px) 1rem
+		width: 100%
+		background-position: center center
+		background-size: cover
+		background-image: url('../img/st7_bg.png')
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+		text-align: center
+		p
+			color: color-get($mau,trang)
+			margin: 0
+			+media-breakpoint-down(xs)
+				font-size: r(14px)
+
+		a
+			color: color-get($mau,main-y)
+			font-weight: 600
+			font-size: r(30px)
+			span
+	.footer-content-1
+		width: 100%
+		padding: 2rem 0
+	.item
+		h3
+			margin-bottom: 1.5rem
+			font-size: r(18px)
+			color: color-get($mau,main-y)
+			font-weight: 500
+			+media-breakpoint-down(md)
+				margin-bottom: 1rem
+		+media-breakpoint-down(md)
+			margin-top: 1rem
+			&:first-child
+				margin-bottom: 2rem
+		+media-breakpoint-down(sm)
+			margin-bottom: 1rem
+			&:last-child
+				margin-bottom: 0
+		nav
+			margin-left: -5px
+			.list-group-item
+				background: none
+				border: 0
+				padding-top: .2rem
+				padding-bottom: .2rem
+				&:first-child
+					padding-top: 0
+				a
+					display: flex
+					font-size: r(14px)
+					
+					text-decoration: none
+					transition: all .2s ease-in-out
+					color: color-get($mau,trang)
+					
+					&:before
+						content: '\f142'
+						font: normal normal normal 14px/1 "Material Design Icons"
+						font-size: 1.2rem
+						padding-top: 3px
+						justify-content: flex-start
+						color: color-get($mau,trang)
+						padding: 0
+					&:hover
+						+media-breakpoint-up(lg)
+							color: color-get($mau,main-y)
+	.footer-content-2
+		width: 100%
+		background: color-get($mau, main-y)
+		padding-top: r(36px)
+		padding-bottom: 3rem
+		font-weight: 500
+		position: relative
+		h6
+			font-size: r(18px)
+			margin-bottom: 1rem
+			font-weight: 600
+		.slogan
+			+media-breakpoint-down(md)
+				margin-bottom: 2rem
+			.logo
+				a
+					display: block
+					img
+						max-width: 100%
+		.quote
+			font-size: r(12px)
+			line-height: 1.5rem
+			h6
+				font-size: r(18px)
+				color: #333333
+				margin-bottom: r(10px)
+			.text
+				p
+					margin-bottom: 0 
+		.social
+			+media-breakpoint-down(md)
+				margin-top: 1rem
+			ul
+				margin-bottom: 0
+				padding-left: 0
+				li
+					display: inline-block
+					+ li
+						margin-left: .5rem
+					a
+						width: 40px
+						height: 40px
+						background: color-get($mau,main-b)
+						color: color-get($mau,trang)
+						display: block
+						text-align: center
+						line-height: r(40px)
+						font-size: 1.2rem
+						border-radius: 50%
+						transition: .3s all ease-in-out
+						&:hover
+							+media-breakpoint-up(lg)
+								background: color-get($mau,main-y)
+								box-shadow: 0px 0px 0px 2px color-get($mau,main-b) inset
+								color: color-get($mau,main-b)
+
+	.copy-right
+		width: 100%
+		background: color-get($mau, main-y)
+		font-size: r(12px)
+		color: #333333
+		.register
+			display: flex
+			justify-content: flex-end
+		.wrapper
+			// padding: 1rem 0
+			padding-top: 1rem 
+			border-top: 1px solid #3333
+		.bottom-menu
+			display: flex
+			justify-content: center
+			a
+				position: relative
+				color: #333333
+				padding-right: .5rem
+				padding-left: .5rem
+				&:first-child
+					&:after
+						content: ''
+						background: #333333
+						height: r(14px)
+						width: 1px
+						position: absolute
+						top: 2px
+						right: 0
+					padding-left: 0
+		.copy
+			+media-breakpoint-down(sm)
+				p
+					text-align: center
+
+	// Khi lên Tablet
+	+media-breakpoint-up(md)
+		.slogan
+			.quote
+				padding-left: 2rem
+			.social-list
+				margin: 1rem 0 0 0
+	// Khi lên PC
+	+media-breakpoint-up(lg)
+		.copy-right
+			position: relative
+			#register
+				position: fixed
+				bottom: 0
+				z-index: 3333
+		.footer-content
+			.list-group
+				.list-group-item
+					padding: .15rem 0
+			.slogan
+				display: flex
+			.social
+				justify-content: center
+				ul
+					text-align: center
+					li
+						margin-bottom: 1rem
+	+media-breakpoint-up(xl)
+		.copy-right
+			.bottom-menu
+				white-space: nowrap
+				justify-content: flex-start
+

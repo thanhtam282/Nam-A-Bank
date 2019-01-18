@@ -1,0 +1,61 @@
+.block-index-3
+	background-position: center center
+	background-size: cover
+	background-image: url('../img/block2/bl2_bg.jpg')
+	padding: r(40px) 0
+	+media-breakpoint-up(md)
+		padding: r(70px) 0
+	.main-title
+		margin-bottom: r(25px)
+	.col-lg-4:nth-child(even)
+		.wrapper
+			figure
+				+media-breakpoint-down(md)
+					flex-direction: row-reverse
+
+	.wrapper
+		display: flex
+		height: 100%
+		+media-breakpoint-down(md)
+			margin-bottom: 1rem
+			height: auto
+		figure
+			overflow: hidden
+			margin: 0
+			transition: .5s all ease-in-out
+			// height: 100%
+			+media-breakpoint-down(md)
+				display: flex
+				flex-wrap: wrap
+
+			.boxzoom
+				box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25)
+				+media-breakpoint-down(md)
+					flex: 0 0 50%
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+				img
+					border: 2px solid color-get($mau,trang)
+					+wh(100%)
+					object-fit: cover
+			figcaption
+				padding: r(25px)
+				height: 100%
+				background: color-get($mau, trang)
+				+media-breakpoint-down(md)
+					flex: 0 0 50%
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+				h3
+					font-size: r(20px)
+					font-weight: 600
+				p
+					font-size: 1rem
+					color: color-get($mau,text-3)
+		&:hover
+			text-decoration: none
+			+media-breakpoint-up(lg)
+				figure
+					transform: translateY(-1rem)
+	.block
+		display: flex

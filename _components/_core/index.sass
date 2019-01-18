@@ -1,0 +1,141 @@
+html,body
+	font-family: 'Encode Sans', sans-serif
+	font-weight: normal
+	line-height: 1.5
+	font-size: 16px
+p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
+	margin: 0
+	padding: 0
+main
+	overflow-x: hidden
+.main-title
+	font-size: r(25px)
+	font-weight: 500
+	text-align: center
+	margin-bottom: r(28px)
+	+media-breakpoint-up(sm)
+		font-size: r(28px)
+	+media-breakpoint-up(lg)
+		font-size: r(36px)
+	&.white
+		color: white
+	&.blue
+		color: color-get($mau, main-b)
+.sub-title
+	text-align: center
+	font-weight: 400
+	color: color-get($mau, main-b)
+	font-size: r(13.5px)
+	margin-bottom: r(20px)
+	+media-breakpoint-up(sm)
+		margin-bottom: r(40px)
+	+media-breakpoint-up(lg)
+		font-size: r(16px)
+		margin-bottom: r(60px)
+	+media-breakpoint-up(xl)
+		margin-bottom: r(80px)
+	
+a.read-more
+	margin: 2rem auto 0 auto
+	border: 2px solid color-get($mau,trang)
+	border-radius: r(20px)
+	color: white
+	font-size: r(15px)
+	font-weight: 600
+	height: r(40px)
+	+f-center
+	min-width: 160px
+	padding: 0 r(30px)
+	+tr(.2)
+	text-transform: uppercase
+	&:hover
+		+media-breakpoint-up(lg)
+			background: color-get($mau,trang)
+			color: color-get($mau,main)
+	&.main
+		border-color: color-get($mau,main-b)
+		color: color-get($mau,main-b)
+		background: color-get($mau,main-y)
+		&:hover
+			+media-breakpoint-up(lg)
+				text-decoration: none
+				background: color-get($mau,main-b)
+				color: color-get($mau,main-y)
+	&.blue
+		box-shadow: inset 0 0 0 2px transparent
+		border: 0
+		color: white
+		text-decoration: none
+		position: relative
+		z-index: 9
+		&:after
+			+btnGradient_1
+			position: absolute
+			top: 0
+			display: block
+			z-index: -1
+			width: 100%
+			height: 100%
+			transition: .3s all ease-in-out
+			border-radius: r(20px)
+			left: 0
+			content: ''
+		&:hover
+			background: color-get($mau, main-y)
+			box-shadow: inset 0 0 0 2px color-get($mau, main-b)
+			color: color-get($mau, main-b)
+			&:after
+				opacity: 0
+	&.transparent
+		border: 0
+		background: transparent
+		color: color-get($mau,extra)
+		&:hover
+			background: tranparent
+			border: 0
+
+
+.section.fp-section
+	display: flex
+	overflow: hidden
+.section
+	overflow-x: hidden
+.fp-section
+.fp-tableCell
+	// padding-top: 4rem
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	// flex-direction: column
+.imgbox
+	width: 100%
+#fp-nav
+	transform: translateY(-50%)
+	margin-top: 0 !important
+	display: none
+	ul 
+		li
+			width: unset
+			height: unset
+			padding: 0
+			margin: 0
+			+ li
+				margin-top: 10px
+			a
+				display: block
+				box-sizing: border-box
+				width: 10px
+				height: 10px
+				background: none
+				border: 2px solid $white
+				opacity: 0.8
+				border-radius: 50px
+				box-shadow: 0 0 1px black
+				+tr(.4)
+				span
+					display: none
+				&:hover
+					opacity: 1
+				&.active
+					background: $white
+					height: 30px

@@ -1,0 +1,336 @@
+.cc-header
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 20
+	transition: 0.3s ease-in-out
+	position: sticky
+	&.minimal
+		transform: translateY(-67px)
+		transition: 0.3s ease-in-out
+	.top-header
+		background: color-get($mau, main-y)
+		padding: .5rem 0
+		+media-breakpoint-up(md)
+			padding: 1rem 0
+		.logo
+			img
+				max-width: 170px
+				+media-breakpoint-up(md)
+					max-width: r(230px)
+				+media-breakpoint-up(xl)
+					max-width: initial
+		.header-top-item-list
+			display: flex
+			margin-left: auto
+			align-items: center
+			.header-top-item
+				a
+					text-decoration: none
+					display: flex
+					align-items: center
+					span
+						transition: .3s all ease-in-out
+						margin-left: r(6px)
+						font-size: r(16px)
+						font-weight: 600
+						color: color-get($mau, den)
+					&:hover
+						+media-breakpoint-up(lg)
+							span
+								color: color-get($mau,main-b)
+				+ .header-top-item
+					margin-left: r(29px)
+					+media-breakpoint-down(lg)
+						margin-left: r(21px)
+		.internet-banking
+			a
+				+btnGradient_1
+				font-size: r(14px)
+				font-weight: 700
+				padding: 0 1rem
+				border-radius: 4px
+				display: flex
+				align-items: center
+				min-height: r(35px)
+				span
+					color: color-get($mau, main-y)
+					font-size: r(18px)
+				b
+					transition: .3s all ease-in-out
+					margin-left: r(7px)
+					color: white
+				&:hover
+					text-decoration: none
+					+media-breakpoint-up(lg)
+						b
+							color: color-get($mau,main-y)
+	.bottom-header
+		background: color-get($mau, light)
+		background-image: linear-gradient(#00000052 15%,transparent 54%)
+		.row
+			min-height: r(40px)
+		.hotline
+			a
+				color: white
+				text-decoration: none
+				font-size: r(12px)
+				display: flex
+				align-items: center
+				transition: .3s all ease-in-out
+				height: 100%
+				p
+					margin-left: r(7px)
+					margin-bottom: 5px
+					+media-breakpoint-down(lg)
+						font-size: 0
+					b
+						margin-left: r(7px)
+						font-size: r(18px)
+						font-weight: 900
+						color: color-get($mau, main-y)
+				&:hover
+					+media-breakpoint-up(lg)
+						text-decoration: underline
+		.header-bottom-item-list
+			display: flex
+			margin-left: auto
+			.menu-list
+				ul
+					padding-left: 0
+					margin-bottom: 0
+					list-style-type: none
+					display: flex
+					height: 100%
+					li
+						min-width: r(42px)
+						border-right: 1px solid color-rgba(black,.15)
+						padding: 0 17px
+						&:first-child
+							border-left: 1px solid color-rgba(black,.15)
+						a
+							color: white
+							font-size: r(14px)
+							font-weight: 500
+							+f-center
+							height: 100%
+							width: 100%
+							transition: .3s all ease-in-out
+							&:hover
+								text-decoration: none
+								+media-breakpoint-up(lg)
+									color: color-get($mau,main-y)
+			.search
+				.search-toggle
+					+f-center
+					min-width: r(42px)
+					border-right: 1px solid color-rgba(black,.15)
+					height: 100%
+					span
+						color: color-get($mau, main-y)
+						font-size: r(20px)
+			.social
+				display: flex
+				.item
+					height: 100%
+					min-width: r(42px)
+					border-right: 1px solid color-rgba(black,.15)
+					a
+						+f-center
+						height: 100%
+						span
+							color: white
+							font-size: r(20px)
+			.language
+				border-right: 1px solid color-rgba(black,.15)
+				min-width: r(42px)
+				a
+					+f-center
+					height: 100%
+	@media (max-width: 992px)
+		display: flex
+		flex-direction: column-reverse
+		.bottom-header
+			.row
+				align-items: center
+				justify-content: space-between
+			.hotline
+				p
+					font-size: 0
+					margin-bottom: 0 !important
+					b
+						font-size: r(16px) !important
+			.internet-banking
+				a
+					background-image: linear-gradient(90deg, #FFDD00 0%, #fffcc2 100%)
+					font-size: r(13px)
+					font-weight: 700
+					padding: 0 1rem
+					border-radius: 4px
+					display: flex
+					align-items: center
+					min-height: r(35px)
+					span
+						color: color-get($mau, main-b)
+						font-size: r(18px)
+					b
+						margin-left: r(7px)
+						color: color-get($mau, main-b)
+
+		.top-header
+			display: flex
+			.row
+				justify-content: space-between
+			.menu-toggle
+				flex: 0 0 40px
+				padding: 0 15px 0 0
+				width: 25px
+				height: 25px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				cursor: pointer
+				transition: transform 330ms ease-out
+				.line-menu
+					background-color: #fff
+					border-radius: 5px
+					width: 100%
+					height: 3px
+					&.half
+						width: 50%
+					&.start
+						transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+						transform-origin: right
+					&.end
+						align-self: flex-end
+						transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+						transform-origin: left
+				&.active
+					transform: translateY(-5px) rotate(-45deg)
+					.line-menu
+						&.start
+							transform: rotate(-90deg) translateX(1.5px)
+						&.end
+							transform: rotate(-90deg) translateX(-1.5px)
+			
+			.header-top-item-list
+				position: absolute
+				display: flex
+				flex-direction: column
+				left: 0
+				top: 97px
+				height: calc(100vh - 97px)
+				background: linear-gradient(135deg, #005791 0%, #5587a8 100%)
+				width: r(288px)
+				align-items: flex-start
+				padding: 2rem 0 0 
+				transform: translateX(-100%)
+				transition: transform 330ms ease-in-out
+				+media-breakpoint-down(sm)
+					top: 81px
+					height: calc(100vh - 81px)
+
+				.header-top-item
+					margin-bottom: 1.5rem
+					width: 100%
+					transform: translateX(-100%)
+					transition: .3s all ease-in-out
+					&:not(:first-child)
+						margin-left: 0
+					a
+						padding-left: 2rem
+						img
+							display: none
+						span
+							margin-left: 0
+							color: #ffffff
+						
+				.menu-list
+					width: 100%
+					ul
+						padding-left: 0
+						margin-bottom: 0
+						list-style-type: none
+						display: flex
+						height: 100%
+						flex-direction: column
+						li
+							min-width: r(42px)
+							margin-bottom: 1.5rem
+							width: 100%
+							transform: translateX(-100%)
+							transition: .3s all ease-in-out
+							a
+								font-size: r(16px)
+								font-weight: 600
+								color: color-get($mau, trang)
+								padding-left: 2rem
+				&.active
+					transform: translateX(0)
+					transition: transform 330ms ease-in-out
+					.header-top-item
+						transform: translateX(0)
+						transition-delay: .1s
+						+ .header-top-item
+							transition-delay: .15s
+							+ .header-top-item
+								transition-delay: .2s
+								+ .header-top-item
+									transition-delay: .25s
+
+					ul
+						li
+							transform: translateX(0)
+							transition-delay: .3s
+							+ li
+								transition-delay: .35s
+								+ li
+									transition-delay: .4s
+									+ li
+										transition-delay: .45s
+										+ li
+											transition-delay: .55s
+
+			.header-bottom-item-list
+				display: flex
+				.search
+					.search-toggle
+						+f-center
+						min-width: r(42px)
+						border-right: 1px solid color-rgba(black,.15)
+						height: 100%
+						span
+							color: #ffdd00
+							font-size: r(20px)
+				.social
+					display: flex
+					.item
+						height: 100%
+						min-width: r(42px)
+						border-right: 1px solid color-rgba(black,.15)
+						a
+							+f-center
+							height: 100%
+							span
+								color: #ffdd00
+								font-size: r(20px)
+				.language
+					border-right: 1px solid color-rgba(black,.15)
+					min-width: r(42px)
+					a
+						+f-center
+						height: 100%
+				
+					
+		
+			
+	@media (max-width: 370px)
+		.bottom-header
+			.hotline
+				padding-left: 0 !important
+				padding-right: 0
+				p
+					margin-left: 0 !important
+			.header-bottom-item-list
+				padding-right: 0
+				

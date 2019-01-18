@@ -1,0 +1,106 @@
+.mdi
+	display: inline-block
+	font-family: "Material Design Icons"
+	text-rendering: auto
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+
+.mdi-lock
+	&:before
+		content: '\f33e'
+.mdi-play
+	&:before
+		content: '\f40a'
+.mdi-magnify
+	&:before
+		content: '\f349'
+.mdi-chevron-down
+	&:before
+		content: '\f140'
+.mdi-credit-card
+	&:before
+		content: '\f19b'
+.mdi-map-marker
+	&:before
+		content: '\f34e'
+.mdi-clipboard-text
+	&:before
+		content: '\f14e'
+.mdi-currency-usd
+	&:before
+		content: '\f1b3'
+.mdi-chart-line-variant
+	&:before
+		content: '\f7b0'
+
+.fab,.fas,.far,.fas,.fa
+	-webkit-font-smoothing: antialiased
+	display: inline-block
+	font-style: normal
+	font-variant: normal
+	text-rendering: auto
+	line-height: 1
+	font-weight: 900
+.fab
+	font-family: $fab
+.fa-facebook
+	&:before
+		content: '\f09a'
+.fa-twitter
+	&:before
+		content: '\f099'
+
+
+.fas.fa-mobile-alt
+	&:before
+		+fontawesome('\f3cd',$faf)
+.fab.fa-facebook-f
+	&:before
+		+fontawesome('\f39e',$fab)
+.fab.fa-youtube
+	&:before
+		+fontawesome('\f167',$fab)
+.fab.fa-google-plus-g
+	&:before
+		+fontawesome('\f0d5',$fab)
+.fas.fa-comment
+	&:before
+		+fontawesome('\f075',$faf)
+.mdi-phone
+	&:before
+		+material('\f3f2')
+
+
+.fa-twitter:before
+	+fontawesome('\f099', $fab)
+.fa-google-plus-g:before
+	+fontawesome('\f0d5', $fab)
+.fa-facebook-f:before
+	+fontawesome('\f39e', $fab)
+.fa-youtube:before
+	+fontawesome('\f167', $fab)
+.fa-download:before
+	+fontawesome('\f019', $faf)
+.fa-calendar-alt:before
+	+fontawesome('\f073', $faf)
+.fa-user-alt:before
+	+fontawesome('\f406', $faf)
+
+
+
+
+.mdi.mdi-email:before
+	+material('\f1ee')
+.mdi.mdi-calendar:before
+	+material('\f0ed')
+.mdi.mdi-arrow-right:before
+	+material('\f054')
+.mdi.mdi-arrow-left:before
+	+material('\f04d')
+.mdi.mdi-chevron-right:before
+	+material('\f142')
+.mdi.mdi-chevron-left:before
+	+material('\f141')

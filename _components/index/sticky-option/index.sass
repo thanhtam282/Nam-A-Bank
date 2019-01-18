@@ -1,0 +1,92 @@
+.sticky-option
+	position: fixed
+	right: 0
+	top: 120px
+	z-index: 15
+	width: 180px
+	+media-breakpoint-down(sm)
+		width: 45px
+	ul
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		// transition-delay: 1s
+		height: 0
+		li
+			background: #0064a7
+			height: 45px
+			transition: background .5s  ease-in-out , transform .5s ease-in-out 0.1s
+			border-left: 1px solid #05588f
+			border-right: 1px solid #05588f
+			
+			&:first-child()
+				border-top: 1px solid #05588f
+				z-index: 9
+				position: relative
+			&:last-child()
+				border-bottom: 1px solid #05588f
+
+			+ li
+				border-top: 1px solid #05588f
+				transform: translateY(-100%)
+				transition: background .5s  ease-in-out , transform .5s ease-in-out 0.1s
+
+				+ li
+					transition: background .5s  ease-in-out , transform .5s ease-in-out 0.15s
+					// transition-delay: 0.15s
+					transform: translateY(-200%)
+					+ li
+						transition: background .5s  ease-in-out , transform .5s ease-in-out 0.2s
+						transform: translateY(-300%)
+						+ li
+							transition: background .5s  ease-in-out , transform .5s ease-in-out 0.25s
+							transform: translateY(-400%)
+							+ li
+								transition: background .5s  ease-in-out , transform .5s ease-in-out 0.3s
+								// transition-delay: 0.3s
+								transform: translateY(-500%)
+			a
+				display: flex
+				height: 100%
+				text-decoration: none
+				span
+					color: white
+					&:first-child
+						flex: 0 0 50px
+						max-width: 50px
+						+f-center
+						font-size: r(20px)
+						img
+							max-width: 20px
+							filter: brightness(0) invert(1)
+					&:last-child
+						height: 100%
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						padding-left: 0 .1rem
+						font-size: r(14px)
+						font-weight: 500
+			&:hover
+				background: color-get($mau, main-y)
+				
+				a
+					span
+						color: color-get($mau, main-b)
+						&:first-child
+							img
+								filter: none
+			+media-breakpoint-down(sm)
+				height: 45px
+				a
+					span
+						&:last-child
+							display: none
+						&:first-child
+							flex: 0 0 45px
+							max-width: 45px
+		&:hover
+			// box-shadow: 0px 0px 0px 1px color-get($mau,main-b) 
+			height: auto
+			li
+				transform: translateY(0)

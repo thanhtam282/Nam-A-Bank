@@ -1,0 +1,60 @@
+.block-index-6
+	background-position: center center
+	background-size: cover
+	background-image: url('../img/block5/bl5_bg.jpg')
+	padding-top: 3rem
+	padding-bottom: 3rem
+	.main-title
+		margin-bottom: r(25px)
+	a
+		figure
+			display: flex
+			flex-wrap: wrap
+			padding-top: r(30px)
+			height: 100%
+
+			// @media (max-width: 450px)
+			// 	flex-direction: column
+			.boxzoom
+				overflow: hidden
+				flex: 0 0 35%
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+				img
+					+wh(100%)
+					object-fit: cover
+					transform: scale(1.01)
+					transition: .5s all ease-in-out
+			figcaption
+				flex: 0 0 65%
+				+media-breakpoint-down(sm)
+					flex: 0 0 100%
+				padding: r(20px)
+				border: 1px solid #e1e1e1
+				background: color-get($mau, trang)
+				// height: 100%
+				h3
+					transition: .3s all ease-in-out
+					font-size: 1rem
+					font-weight: 500
+					color: color-get($mau,text-3)
+					height: r(76px)
+					+line(4)
+
+		&:hover
+			text-decoration: none
+			+media-breakpoint-up(lg)
+				text-decoration: underline
+				figure
+					img
+						transform: scale(1.1) !important
+					figcaption
+						h3
+							color: color-get($mau,main-b)
+	// .col-12
+	// 	+media-breakpoint-down(md)
+	// 		figure
+	// 			.boxzoom
+	// 				flex: 0 0 35% !important
+	// 			figcaption
+	// 				flex: 0 0 65% !important
