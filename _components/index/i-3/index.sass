@@ -16,6 +16,7 @@
 	.wrapper
 		display: flex
 		height: 100%
+		text-decoration: none
 		+media-breakpoint-down(md)
 			margin-bottom: 1rem
 			height: auto
@@ -49,13 +50,19 @@
 				h3
 					font-size: r(20px)
 					font-weight: 600
+					color: color-get($mau,main-b)
 				p
+					margin-top: 1rem
 					font-size: 1rem
 					color: color-get($mau,text-3)
+					+line(4)
 		&:hover
 			text-decoration: none
 			+media-breakpoint-up(lg)
 				figure
 					transform: translateY(-1rem)
+					figcaption
+						h3
+							text-decoration: underline
 	.block
 		display: flex

@@ -9,12 +9,15 @@
 		"_plugins/mapping.js",
 		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/slick-carousel/slick/slick.min.js",
 		"bower_components/aos/dist/aos.js"
 	],
 	"styles": [
 		"_plugins/grid.css",
 		"bower_components/fullpage.js/dist/fullpage.min.css",
 		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/slick-carousel/slick/slick-theme.css",
+		"bower_components/slick-carousel/slick/slick.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css",
 		"bower_components/aos/dist/aos.css"
 	]

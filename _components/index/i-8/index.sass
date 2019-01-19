@@ -1,9 +1,21 @@
 .block-index-8
+	// padding: 2rem 0
+	.big_wrapper
+		display: flex
+		width: 100%
+		flex-direction: column
+	.fp-tableCell
+		// flex-direction: column 
+		// flex-wrap: nowrap
+		.footer-content-0, .footer-content-1, .footer-content-2, .copy-right
+			flex: 0 0 100%
 	background: color-get($mau,main-b)
 	// padding-top: 3rem
 	// padding-bottom: 3rem
 
 	.footer-content-0
+		// flex: 0 0 100%
+
 		padding-top: 5rem
 		padding-bottom: 3rem
 		+media-breakpoint-down(md)
@@ -12,7 +24,7 @@
 		background-position: center center
 		background-size: cover
 		background-image: url('../img/st7_bg.png')
-		display: flex
+		// display: flex
 		justify-content: center
 		flex-direction: column
 		align-items: center
@@ -30,7 +42,11 @@
 			span
 	.footer-content-1
 		width: 100%
-		padding: 2rem 0
+		// padding-bottom: 9rem
+		background: color-get($mau, main-b)
+		// flex: 0 0 100%
+
+		padding: r(30px) 0
 	.item
 		h3
 			margin-bottom: 1.5rem
@@ -77,6 +93,7 @@
 							color: color-get($mau,main-y)
 	.footer-content-2
 		width: 100%
+		// flex: 0 0 100%
 		background: color-get($mau, main-y)
 		padding-top: r(36px)
 		padding-bottom: 3rem
@@ -86,6 +103,7 @@
 			font-size: r(18px)
 			margin-bottom: 1rem
 			font-weight: 600
+			
 		.slogan
 			+media-breakpoint-down(md)
 				margin-bottom: 2rem
@@ -104,6 +122,8 @@
 			.text
 				p
 					margin-bottom: 0 
+					span
+						color: #1787d2
 		.social
 			+media-breakpoint-down(md)
 				margin-top: 1rem
@@ -133,6 +153,8 @@
 
 	.copy-right
 		width: 100%
+		// padding-top: 3rem
+		// flex: 0 0 100%
 		background: color-get($mau, main-y)
 		font-size: r(12px)
 		color: #333333
@@ -140,8 +162,8 @@
 			display: flex
 			justify-content: flex-end
 		.wrapper
-			// padding: 1rem 0
-			padding-top: 1rem 
+			padding: 1rem 0
+			// padding-top: 1rem 
 			border-top: 1px solid #3333
 		.bottom-menu
 			display: flex
