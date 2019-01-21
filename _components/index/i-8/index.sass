@@ -4,11 +4,15 @@
 		display: flex
 		width: 100%
 		flex-direction: column
+		justify-content: space-between
+		+media-breakpoint-up(lg)
+			height: calc(100% - 107px)
 	.fp-tableCell
 		// flex-direction: column 
 		// flex-wrap: nowrap
 		.footer-content-0, .footer-content-1, .footer-content-2, .copy-right
-			flex: 0 0 100%
+			+media-breakpoint-down(md)
+				flex: 0 0 100%
 	background: color-get($mau,main-b)
 	// padding-top: 3rem
 	// padding-bottom: 3rem
@@ -196,6 +200,15 @@
 			.social-list
 				margin: 1rem 0 0 0
 	// Khi lên PC
+	+media-breakpoint-down(md)
+
+		.copy-right
+			position: relative
+			#register
+				img
+					position: fixed
+					bottom: 0
+					z-index: 99
 	+media-breakpoint-up(lg)
 		.copy-right
 			position: relative

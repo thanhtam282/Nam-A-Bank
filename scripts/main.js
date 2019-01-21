@@ -1,8 +1,8 @@
 
 $(document).ready(function () {
-	AOS.init({
-		duration: 1500
-	});
+	// AOS.init({
+	// 	duration: 1500
+	// });
 	var x = window.matchMedia("(max-width: 1599.98px)")
 	runFullpage(x)
 	x.addListener(runFullpage)
@@ -89,11 +89,25 @@ $(document).ready(function () {
 	}).watch();
 	homeSwiper();
 	block5Swiper();
-	// let zero = 0
-	// $(window).on('scroll', function () {
-	// 	$('.cc-header').toggleClass('minimal', $(window).scrollTop() > zero)
-	// 	zero = $(window).scrollTop()
-	// })
+	let zero = 40
+	$(window).on('scroll', function () {
+		$('.cc-header').toggleClass('minimal', $(window).scrollTop() > zero)
+		zero = $(window).scrollTop()
+	})
 
 })
+
+if ($(window).width() < 992 ){
+	AOS.init({
+		disable: true
+	})
+	
+} else {
+	AOS.init({
+		duration: 1500,
+
+		disable: false
+	})
+	
+}
 
